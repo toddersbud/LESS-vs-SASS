@@ -1,0 +1,57 @@
+@brandPrimary: #ec1c24;
+@brandSecondary: #252a90;
+.o { outline:1px solid red; }
+.b {border:1px solid red; }
+.notrans {-webkit-transition:none; -moz-transition:none; -o-transition:none; transition:none;}
+
+// Rounded Corners
+.border_radius(@radius:60px){
+  -webkit-border-radius: @radius; // Webkit 1+
+  -moz-border-radius: @radius; // FF 1+
+  border-radius: @radius; // Opera 10.5, IE 9, Saf5, Chrome
+}
+
+// Box Shadow
+.box_shadow(@shadow_x:3px, @shadow_y:3px, @shadow_rad:3px, @shadow_in:3px, @shadow_color:#888){
+    box-shadow:@shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
+    -webkit-box-shadow:@shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
+    -moz-box-shadow:@shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
+}
+
+.multiple_box_shadows(@arguments) {
+    -webkit-box-shadow: @arguments;
+    -moz-box-shadow: @arguments;
+    box-shadow: @arguments;
+}
+
+.rotation(@deg:5deg){
+  -webkit-transform: rotate(@deg);
+  -moz-transform: rotate(@deg);
+  transform: rotate(@deg);
+}
+
+// Top-to-Bottom Gradient
+.gradientV(@start, @end){
+  background: (@start + @end) / 2; // Non CSS3 browsers get the average color
+  background-image: -moz-linear-gradient(top,  @start, @end); // FF 3.6
+  background-image: -webkit-gradient(linear, left top, left bottom, from(@start), to(@end)); // Safari 4+, Chrome
+  background-image: -webkit-linear-gradient(top, @start, @end); // Chrome 10+, Safari 5.1+
+  background-image: -o-linear-gradient(top, @start, @end); // Opera 11.10+
+  background-image: linear-gradient(top, @start, @end); // CSS3
+  filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)", @start, @end); // IE6 & 7
+  -ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)", @start, @end); // IE8
+  background-image: -ms-linear-gradient(top, @start, @end); // IE10
+}
+
+// Left-to-Right Gradient
+.gradientH(@start, @end){
+  background: (@start + @end) / 2; // Non CSS3 browsers get the average color
+  background-image: -moz-linear-gradient(left,  @start, @end); // FF 3.6
+  background-image: -webkit-gradient(linear, left center, right center, from(@start), to(@end)); // Safari 4+, Chrome
+  background-image: -webkit-linear-gradient(left center, right center, from(@start), to(@end)); // Chrome 10+, Safari 5.1+
+  background-image: -o-linear-gradient(left, @start, @end); // Opera 11.10+
+  background-image: linear-gradient(left, @start, @end); // CSS3
+  filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d, GradientType=1)", @start, @end); // IE6 & 7
+  -ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d, GradientType=1)", @start, @end); // IE8
+  background-image: -ms-linear-gradient(left, @start, @end); // IE10
+}
