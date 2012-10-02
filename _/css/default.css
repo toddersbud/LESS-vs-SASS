@@ -1,4 +1,19 @@
 @import "font-awesome.css";
+.o {
+  outline: 1px solid red;
+}
+.b {
+  border: 1px solid red;
+}
+.notrans {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+body {
+  color: #5d6971;
+}
 /*
  * HTML5 Boilerplate
  *
@@ -6,42 +21,120 @@
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
-
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-html,button,input,select,textarea {color: #222;}
-body {font-size: 1em; line-height: 1.4; font-family: 'Raleway', 'Helvetica Neueu', Helvetica, Arial, sans-serif; background:url('/images/corrugation.png');}
-::-moz-selection {background: #b3d4fc;text-shadow: none;}
-::selection {background: #b3d4fc;text-shadow: none;}
-img {vertical-align: middle;}
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+body {
+  background: url('/images/corrugation.png');
+  font-size: 1em;
+  line-height: 1.4;
+  font-family: 'Raleway', 'Helvetica Neueu', Helvetica, Arial, sans-serif;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+img {
+  vertical-align: middle;
+}
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-body {margin:0 auto; text-align:center; }
-h1 {font-size:11em; font-weight:100; line-height:1.4; margin:0; padding:0;}
-.item .icon:before {font-size: 13em;}
-.item {background:rgba(155,155,155,.3); display:inline-block; margin:0 1%; padding:20px; text-align:center; width:40%;}
-.item b {display:block;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+body {
+  margin: 0 auto;
+  max-width: 60em;
+  text-align: center;
+}
+h1 {
+  font-size: 6.5em;
+  font-weight: 900;
+  line-height: .9;
+  margin: 30px 0;
+  padding: 0;
+}
+h2 {
+  font-size: 1.9em;
+  margin: 0;
+}
+.item {
+  background: rgba(155, 155, 155, 0.3);
+  display: inline-block;
+  margin: 0 1% 20px 1%;
+  padding: 20px;
+  text-align: center;
+  width: 85%;
+}
+.item .icon:before {
+  display: inline-block;
+  font-size: 11em;
+  line-height: .7;
+  margin: 20px 0;
+}
+.item b {
+  display: block;
+}
+.item a {
+  display: inline-block;
+  margin: 0 1%;
+  text-decoration: none;
+}
+@media only screen and (min-width: 40em) {
+  h1 {
+    font-size: 10em;
+  }
+  h2 {
+    font-size: 4em;
+    margin-bottom: 20px;
+  }
+  .item {
+    width: 40%;
+  }
+  .item .icon:before {
+    font-size: 13em;
+  }
+}
+.item a {
+  -webkit-transition: color 0.1s ease-in-out;
+  -moz-transition: color 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out;
+}
+.item.less {
+  color: #244270;
+}
+.item.less a {
+  color: #182b49;
+}
+.item.less a:hover {
+  color: #305997;
+}
+.item.sass {
+  color: #ff44da;
+}
+.item.sass a {
+  color: #ff77e4;
+}
+.item.sass a:hover {
+  color: #ff11d0;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-.hidden {display: none !important; visibility: hidden;}
-.clearfix:before,.clearfix:after {content: " "; display: table;}
-.clearfix:after {clear: both;}
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}

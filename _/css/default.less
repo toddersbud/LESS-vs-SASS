@@ -1,0 +1,71 @@
+@import "font-awesome.css";
+@import "less/_mixins.less";
+body {color:@brandPrimary;}
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+html,button,input,select,textarea {color:#222;}
+body {background:url('/images/corrugation.png'); font-size:1em; line-height:1.4; font-family:'Raleway', 'Helvetica Neueu', Helvetica, Arial, sans-serif; }
+::selection {background:#b3d4fc; text-shadow:none;}
+img {vertical-align:middle;}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body {margin:0 auto; max-width:60em; text-align:center; }
+h1 {font-size:6.5em; font-weight:900; line-height:.9; margin:30px 0; padding:0;}
+h2 {font-size:1.9em; margin:0;}
+.item { background:rgba(155,155,155,.3); display:inline-block; margin:0 1% 20px 1%; padding:20px; text-align:center; width:85%;
+  .icon:before {display:inline-block; font-size:11em; line-height:.7; margin:20px 0;}
+  b {display:block;}
+  a {display:inline-block; margin:0 1%; text-decoration:none;}
+}
+@media only screen and (min-width:40em) {
+  h1 {font-size:10em;}
+  h2 {font-size:4em; margin-bottom:20px;}
+  .item { width:40%;
+    .icon:before {font-size:13em;}
+  }
+}
+
+
+
+
+
+
+.item {
+  a { .transition(color, .1s); }
+  &.less { color:@Less;
+    a { color:darken(@Less,10%);
+      &:hover { color:lighten(@Less,10%); }
+    }
+  }
+  &.sass {color:@Sass;
+    a {color:lighten(@Sass,10%); 
+      &:hover {color:darken(@Sass,10%);}
+    }
+  }
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+.hidden {display: none !important; visibility: hidden;}
+.clearfix:before,.clearfix:after {content: " "; display: table;}
+.clearfix:after {clear: both;}

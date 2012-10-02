@@ -1,5 +1,8 @@
-@brandPrimary: #ec1c24;
+@brandPrimary: #5d6971;
 @brandSecondary: #252a90;
+@Sass: #ff44da;
+@Less: #244270;
+
 .o { outline:1px solid red; }
 .b {border:1px solid red; }
 .notrans {-webkit-transition:none; -moz-transition:none; -o-transition:none; transition:none;}
@@ -54,4 +57,10 @@
   filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d, GradientType=1)", @start, @end); // IE6 & 7
   -ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d, GradientType=1)", @start, @end); // IE8
   background-image: -ms-linear-gradient(left, @start, @end); // IE10
+}
+
+.transition(@prop, @duration:2s, @ease:ease-in-out) {
+  -webkit-transition:@prop @duration @ease;
+  -moz-transition:@prop @duration @ease;
+  transition:@prop @duration @ease;
 }
