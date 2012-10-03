@@ -32,7 +32,7 @@ textarea {
   color: #222;
 }
 body {
-  background: url('/images/corrugation.png');
+  background: url('/_/images/corrugation.png');
   font-size: 1em;
   line-height: 1.4;
   font-family: 'Raleway', 'Helvetica Neueu', Helvetica, Arial, sans-serif;
@@ -58,16 +58,26 @@ h1 {
   line-height: .9;
   margin: 30px 0;
   padding: 0;
+  text-shadow: 0px 6px 2px rgba(0, 0, 0, 0.17);
+  position: relative;
+  color: #222;
+  background: url("/_/images/grad.png");
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 h2 {
   font-size: 1.9em;
+  font-weight: 900;
   margin: 0;
 }
 .item {
   background: rgba(155, 155, 155, 0.3);
+  border: 1px solid #bbb;
+  border-bottom: 0;
   display: inline-block;
   margin: 0 1% 20px 1%;
-  padding: 20px;
+  padding: 2% 1% 8% 1%;
+  position: relative;
   text-align: center;
   width: 85%;
 }
@@ -78,12 +88,40 @@ h2 {
   margin: 20px 0;
 }
 .item b {
+  background-color: #244270;
+  border: 1px solid #888;
+  border-top: 1px solid #888;
+  bottom: -1px;
+  color: #fff;
   display: block;
+  font-size: 1.5em;
+  font-weight: 100;
+  left: -1px;
+  position: absolute;
+  padding: 2% 1%;
+  width: 98.1%;
+  z-index: 2;
+}
+.item b span {
+  font-size: 1.3em;
+  font-weight: 700;
 }
 .item a {
+  color: #244270;
   display: inline-block;
-  margin: 0 1%;
+  margin: 0 1% 20px 0;
+  position: relative;
   text-decoration: none;
+  z-index: 9;
+}
+.item .icon.icon-thumbs-down {
+  margin-bottom: 22px;
+}
+.item.sass b {
+  background-color: #ff44da;
+}
+.item.sass a {
+  color: #ff44da;
 }
 @media only screen and (min-width: 40em) {
   h1 {
@@ -99,14 +137,74 @@ h2 {
   .item .icon:before {
     font-size: 13em;
   }
+  .item a {
+    margin-bottom: 0;
+  }
+}
+.item {
+  -webkit-border-radius: 12px 12px 6px 6px;
+  -moz-border-radius: 12px 12px 6px 6px;
+  border-radius: 12px 12px 6px 6px;
+  background: #dedede;
+  background-image: -moz-linear-gradient(top, #f0f0f0, #cccccc);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f0f0f0), to(#cccccc));
+  background-image: -webkit-linear-gradient(top, #f0f0f0, #cccccc);
+  background-image: -o-linear-gradient(top, #f0f0f0, #cccccc);
+  background-image: linear-gradient(top, #f0f0f0, #cccccc);
+  filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#f0f0f0, endColorstr=#cccccc)";
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#f0f0f0, endColorstr=#cccccc)";
+  background-image: -ms-linear-gradient(top, #f0f0f0, #cccccc);
+  -webkit-box-shadow: inset 0 4px 7px rgba(0,0,0,.17), inset 0 0 0 1px #fff, 0 0 0 1px #a6a6a6;;
+  -moz-box-shadow: inset 0 4px 7px rgba(0,0,0,.17), inset 0 0 0 1px #fff, 0 0 0 1px #a6a6a6;;
+  box-shadow: inset 0 4px 7px rgba(0,0,0,.17), inset 0 0 0 1px #fff, 0 0 0 1px #a6a6a6;;
 }
 .item a {
-  -webkit-transition: color 0.1s ease-in-out;
-  -moz-transition: color 0.1s ease-in-out;
-  transition: color 0.1s ease-in-out;
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  -moz-transition-delay: 0.01s;
+  -webkit-transition-delay: 0.01s;
+  -o-transition-delay: 0.01s;
+}
+.item a:hover {
+  -webkit-transform: rotate(-6deg);
+  -moz-transform: rotate(-6deg);
+  transform: rotate(-6deg);
+  top: -20px;
+}
+.item a.down {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.item a.down:hover {
+  bottom: -20px;
+  top: auto;
+}
+.item a.counted {
+  -webkit-transform: scale(3.3);
+  -moz-transform: scale(3.3);
+  transform: scale(3.3);
+}
+.item b {
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+  background: #ffffff;
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0)));
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  background-image: linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=rgba(255, 255, 255, 0.3), endColorstr=rgba(255, 255, 255, 0))";
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=rgba(255, 255, 255, 0.3), endColorstr=rgba(255, 255, 255, 0))";
+  background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
 }
 .item.less {
   color: #244270;
+}
+.item.less b {
+  background-color: #182b49;
 }
 .item.less a {
   color: #182b49;
@@ -116,6 +214,9 @@ h2 {
 }
 .item.sass {
   color: #ff44da;
+}
+.item.sass b {
+  background-color: #ff11d0;
 }
 .item.sass a {
   color: #ff77e4;

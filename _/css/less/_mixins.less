@@ -16,21 +16,27 @@
 
 // Box Shadow
 .box_shadow(@shadow_x:3px, @shadow_y:3px, @shadow_rad:3px, @shadow_in:3px, @shadow_color:#888){
-    box-shadow:@shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
-    -webkit-box-shadow:@shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
-    -moz-box-shadow:@shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
+  box-shadow:@shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
+  -webkit-box-shadow:@shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
+  -moz-box-shadow:@shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
 }
 
 .multiple_box_shadows(@arguments) {
-    -webkit-box-shadow: @arguments;
-    -moz-box-shadow: @arguments;
-    box-shadow: @arguments;
+  -webkit-box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  box-shadow: @arguments;
 }
 
 .rotation(@deg:5deg){
   -webkit-transform: rotate(@deg);
   -moz-transform: rotate(@deg);
   transform: rotate(@deg);
+}
+
+.scale(@amount:5deg){
+  -webkit-transform: scale(@amount);
+  -moz-transform: scale(@amount);
+  transform: scale(@amount);
 }
 
 // Top-to-Bottom Gradient
@@ -63,4 +69,10 @@
   -webkit-transition:@prop @duration @ease;
   -moz-transition:@prop @duration @ease;
   transition:@prop @duration @ease;
+}
+
+.trans-delay(@duration){
+-moz-transition-delay:@duration;
+-webkit-transition-delay:@duration;
+-o-transition-delay:@duration;
 }
