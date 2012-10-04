@@ -53,6 +53,7 @@ body {
 }
 h1 {
   background: url("/_/images/grad.png");
+  background-size: 110%;
   font-size: 6.5em;
   font-weight: 900;
   line-height: .9;
@@ -121,9 +122,15 @@ h2 {
 .item.sass a {
   color: #ff44da;
 }
+@media only screen and (min-width: 33.5em) {
+  h1 {
+    background-size: 40%;
+  }
+}
 @media only screen and (min-width: 40em) {
   h1 {
     font-size: 10em;
+    background-size: 110%;
   }
   h2 {
     font-size: 4em;
@@ -137,5 +144,10 @@ h2 {
   }
   .item a {
     margin-bottom: 0;
+  }
+}
+@media only screen and (min-width: 52em) {
+  h1 {
+    background-size: 40%;
   }
 }
