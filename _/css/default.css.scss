@@ -1,0 +1,73 @@
+@import "font-awesome.css";
+@import "sass/_mixins.css.scss";
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+html,button,input,select,textarea {color:$brandPrimary;}
+::selection {background:#b3d4fc; text-shadow:none;}
+img {vertical-align:middle;}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body {background:url('/_/images/corrugation.png'); color:$brandPrimary; font-size:1em; line-height:1.4; @include font_stack; margin:0 auto; max-width:60em; text-align:center; }
+h1 {color:#222; font-size:6.5em; font-weight:900; line-height:.9; margin:30px 0; padding:0; text-shadow:0px 6px 2px rgba(0,0,0,.17); position:relative; 
+background:url("/_/images/grad.png");
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+h2 {font-size:1.9em; font-weight:900; margin:0;}
+.item { background:rgba(155,155,155,.3); border:1px solid #bbb; border-bottom:0; display:inline-block; margin:0 1% 20px 1%; padding:2% 1% 8% 1%; position:relative; text-align:center; width:85%;
+  .icon:before {display:inline-block; font-size:11em; line-height:.7; margin:20px 0;}
+  b {background-color:$Less; border:1px solid #888; border-top:1px solid #888; bottom:-1px; color:#fff; display:block; font-size:1.5em; font-weight:100; left:-1px; position:absolute; padding:2% 1%; width:98.1%; z-index:2;
+    span {font-size:1.3em; font-weight:700;}
+  }
+  a {color:$Less; display:inline-block; margin:0 1% 20px 0; position:relative; text-decoration:none; z-index:9;}
+  .icon.icon-thumbs-down {margin-bottom:22px;}
+  &.sass {
+    b {background-color:$Sass;}
+    a {color:$Sass;}
+  }
+}
+@media only screen and (min-width:40em) {
+  h1 {font-size:10em;}
+  h2 {font-size:4em; margin-bottom:20px;}
+  .item { width:40%;
+    .icon:before {font-size:13em;}
+    a {margin-bottom:0;}
+  }
+}
+
+
+.item { @include border_radius(12px 12px 6px 6px); @include linear-gradient(#f0f0f0, #ccc); @include box_shadow(inset 0 4px 7px rgba(0,0,0,.17), inset 0 0 0 1px #fff, 0 0 0 1px #a6a6a6);
+  a { @include transition(.15s); @include trans-delay(.01s);
+    &:hover {@include rotate(-6deg); top:-20px;}
+    &.down {@include transition(.3s);}
+    &.down:hover {bottom:-20px; top:auto;}
+    &.counted {@include scale(3.3);}
+  }
+  b {@include border_radius(0 0 6px 6px); @include linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));}
+  &.less { color:$Less;
+    b {background-color:darken($Less,10%);}
+    a { color:darken($Less,10%);
+      &:hover { color:lighten($Less,10%); }
+    }
+  }
+  &.sass {color:$Sass;
+    b {background-color:darken($Sass,10%);}
+    a {color:lighten($Sass,10%); 
+      &:hover {color:darken($Sass,10%);}
+    }
+  }
+}

@@ -1,11 +1,11 @@
 @brandPrimary: #5d6971;
-@brandSecondary: #252a90;
 @Sass: #ff44da;
 @Less: #244270;
 
 .o { outline:1px solid red; }
 .b {border:1px solid red; }
 .notrans {-webkit-transition:none; -moz-transition:none; -o-transition:none; transition:none;}
+.font_stack {font-family:'Raleway', 'Helvetica Neueu', Helvetica, Arial, sans-serif;}
 
 // Rounded Corners
 .border_radius(@radius:60px){
@@ -72,7 +72,8 @@
 }
 
 .trans-delay(@duration){
--moz-transition-delay:@duration;
--webkit-transition-delay:@duration;
--o-transition-delay:@duration;
+  -moz-transition-delay:@duration;
+  -webkit-transition-delay:@duration;
+  -o-transition-delay:@duration;
+  transition-delay:@duration;
 }

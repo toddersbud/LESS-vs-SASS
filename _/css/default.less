@@ -1,6 +1,5 @@
 @import "font-awesome.css";
 @import "less/_mixins.less";
-body {color:@brandPrimary;}
 /*
  * HTML5 Boilerplate
  *
@@ -13,7 +12,6 @@ body {color:@brandPrimary;}
    Base styles: opinionated defaults
    ========================================================================== */
 html,button,input,select,textarea {color:#222;}
-body {background:url('/_/images/corrugation.png'); font-size:1em; line-height:1.4; font-family:'Raleway', 'Helvetica Neueu', Helvetica, Arial, sans-serif; }
 ::selection {background:#b3d4fc; text-shadow:none;}
 img {vertical-align:middle;}
 
@@ -21,16 +19,9 @@ img {vertical-align:middle;}
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-body {margin:0 auto; max-width:60em; text-align:center; }
-h1 {font-size:6.5em; font-weight:900; line-height:.9; margin:30px 0; padding:0; text-shadow:0px 6px 2px rgba(0,0,0,.17); position:relative; 
-color:#222;
-background:url("/_/images/grad.png");
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
- }
-
-
-
+body {background:url('/_/images/corrugation.png'); font-size:1em; color:@brandPrimary; .font_stack; line-height:1.4; margin:0 auto; max-width:60em; text-align:center;}
+h1 {background:url("/_/images/grad.png"); font-size:6.5em; font-weight:900; line-height:.9; margin:30px 0; padding:0; text-shadow:0px 6px 2px rgba(0,0,0,.17); position:relative; 
+ -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
 h2 {font-size:1.9em; font-weight:900; margin:0;}
 .item { background:rgba(155,155,155,.3); border:1px solid #bbb; border-bottom:0; display:inline-block; margin:0 1% 20px 1%; padding:2% 1% 8% 1%; position:relative; text-align:center; width:85%;
   .icon:before {display:inline-block; font-size:11em; line-height:.7; margin:20px 0;}
@@ -44,6 +35,7 @@ h2 {font-size:1.9em; font-weight:900; margin:0;}
     a {color:@Sass;}
   }
 }
+
 @media only screen and (min-width:40em) {
   h1 {font-size:10em;}
   h2 {font-size:4em; margin-bottom:20px;}
@@ -54,38 +46,28 @@ h2 {font-size:1.9em; font-weight:900; margin:0;}
 }
 
 
-.item { .border_radius(12px 12px 6px 6px); .gradientV(#f0f0f0, #ccc); .multiple_box_shadows(~"inset 0 4px 7px rgba(0,0,0,.17), inset 0 0 0 1px #fff, 0 0 0 1px #a6a6a6;");
-  a { .transition(all, .15s); .trans-delay(.01s);
-    &:hover {.rotation(-6deg); top:-20px;}
-    &.down {.transition(all, .3s);}
-    &.down:hover {bottom:-20px; top:auto;}
-    &.counted {.scale(3.3);}
-  }
-  b {.border_radius(0 0 6px 6px);  .gradientV(rgba(255,255,255,.3), rgba(255,255,255,0));}
-  &.less { color:@Less;
-    b {background-color:darken(@Less,10%);}
-    a { color:darken(@Less,10%);
-      &:hover { color:lighten(@Less,10%); }
-    }
-  }
-  &.sass {color:@Sass;
-    b {background-color:darken(@Sass,10%);}
-    a {color:lighten(@Sass,10%); 
-      &:hover {color:darken(@Sass,10%);}
-    }
-  }
-}
 
 
 
 
-
-
-
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-.hidden {display: none !important; visibility: hidden;}
-.clearfix:before,.clearfix:after {content: " "; display: table;}
-.clearfix:after {clear: both;}
+// .item { .border_radius(12px 12px 6px 6px); .gradientV(#f0f0f0, #ccc); .multiple_box_shadows(~"inset 0 4px 7px rgba(0,0,0,.17), inset 0 0 0 1px #fff, 0 0 0 1px #a6a6a6;");
+//   a { .transition(all, .15s); .trans-delay(.01s);
+//     &:hover {.rotation(-6deg); top:-20px;}
+//     &.down {.transition(all, .3s);}
+//     &.down:hover {bottom:-20px; top:auto;}
+//     &.counted {.scale(3.3);}
+//   }
+//   b {.border_radius(0 0 6px 6px); .gradientV(rgba(255,255,255,.3), rgba(255,255,255,0));}
+//   &.less { color:@Less;
+//     b {background-color:darken(@Less,10%);}
+//     a { color:darken(@Less,10%);
+//       &:hover { color:lighten(@Less,10%); }
+//     }
+//   }
+//   &.sass {color:@Sass;
+//     b {background-color:darken(@Sass,10%);}
+//     a {color:lighten(@Sass,10%); 
+//       &:hover {color:darken(@Sass,10%);}
+//     }
+//   }
+// }
