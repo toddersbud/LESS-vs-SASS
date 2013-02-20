@@ -3,7 +3,6 @@
 @mixin b{border:1px solid red};
 @mixin notrans{-webkit-transition:none; -moz-transition:none; -o-transition:none;transition:none;}
 @mixin font_stack{font-family:'Raleway', 'Helvetica Neueu', Helvetica, Arial, sans-serif;}
-
 $brandPrimary: #5d6971;
 $Sass: #ff44da;
 $Less: #244270;
@@ -14,9 +13,9 @@ $Less: #244270;
 
 // ---- CSS3 SASS MIXINS ----
 // https://github.com/madr/css3-sass-mixins
-//  
+//
 //  Copyright (C) 2011 by Anders Ytterström
-//  
+//
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
 //  in the Software without restriction, including without limitation the rights
@@ -39,8 +38,8 @@ $Less: #244270;
 
 //  Should IE filters be used or not?
 //  PROS: gradients, drop shadows etc will be handled by css.
-//  CONS: will harm the site performance badly, 
-//        especially on sites with heavy rendering and scripting. 
+//  CONS: will harm the site performance badly,
+//        especially on sites with heavy rendering and scripting.
 $useIEFilters: 0; // might be 0 or 1. disabled by default.
 
 @mixin border-image ($path, $offsets, $repeats) {
@@ -59,7 +58,7 @@ $useIEFilters: 0; // might be 0 or 1. disabled by default.
 
 @mixin box_shadow($shadow1, $shadow2:false, $shadow3:false, $shadow4:false, $shadow5:false) {
  $params: $shadow1;
-  @if $shadow2 
+  @if $shadow2
     { $params: $shadow1, $shadow2; }
     @if $shadow3 != false
       { $params: $shadow1, $shadow2, $shadow3; }
@@ -79,21 +78,21 @@ $useIEFilters: 0; // might be 0 or 1. disabled by default.
   @if $ie != 1 {
     background-color: $to;
   }
-  
+
   background-image: -moz-linear-gradient($from, $to);
   background-image: -o-linear-gradient($from, $to);
   background-image: -ms-linear-gradient($from, $to);
   background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, $from),color-stop(1, $to));
   background-image: -webkit-linear-gradient($from, $to);
 
-  @if $ie == 1 { 
+  @if $ie == 1 {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}');
     -ms-filter: quote(progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}'));
   }
 }
 
-@mixin rgba($hex, $alpha, $ie: $useIEFilters) {     
-  @if $ie == 1 { 
+@mixin rgba($hex, $alpha, $ie: $useIEFilters) {
+  @if $ie == 1 {
     // this formula is not accurate enough, will be fixed with sass 3.1
     $hexopac: '#' + ceil((($alpha * 255)/16) *10) + $hex;
     background-color: none;

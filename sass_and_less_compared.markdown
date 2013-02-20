@@ -66,7 +66,7 @@ Sass and Less have the `&` selector that allows nested selector to refer to the 
       border-top: dotted 1px black;   |   border-top: dotted 1px black;
       border-bottom: solid 2px black; |   border-bottom: solid 2px black;
     }                                 | }
-                                      | 
+                                      |
     #menu a {                         | #menu a {
       @include bordered;              |   .bordered;
     }                                 | }
@@ -78,7 +78,7 @@ Sass and Less have the `&` selector that allows nested selector to refer to the 
     @mixin bordered($width: 2px) {    | .bordered(@width: 2px) {
       border: $width solid black;     |   border: @width solid black;
     }                                 | }
-                                      | 
+                                      |
     #menu a {                         | #menu a {
       @include bordered(4px);         |   .bordered(4px);
     }                                 | }
@@ -219,7 +219,7 @@ Less provides a feature that Sass does not:
       .red { background-color: red }
       .green { background-color: green }
     }
-    
+
     .foo {
       #bundle > .red;
     }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html>
   <head>
     <meta charset="utf-8">
     <title>LESS v SASS</title>
@@ -15,18 +15,19 @@
     <h1>The Battle</h1>
     <div class="item less">
       <h2>LESS</h2>
-      <a href="#" class="up active"><i class="icon icon-thumbs-up"></i></a>
-      <a href="#" class="down"><i class="icon icon-thumbs-down"></i></a>
-      <b>Current Votes: <span>264</span></b>     
+      <a href="#less-up" class="up active"><i class="icon icon-thumbs-up" id="less-up"></i></a>
+      <a href="#less-down" class="down"><i class="icon icon-thumbs-down" id="less-down"></i></a>
+      <b>Current Votes: <span>264</span></b>
     </div>
     <div class="item sass">
       <h2>SASS</h2>
-      <a href="#" class="up"><i class="icon icon-thumbs-up"></i></a>
-      <a href="#" class="down"><i class="icon icon-thumbs-down"></i></a>
+      <a href="#sass-up" class="up"><i class="icon icon-thumbs-up" id="sass-up"></i></a>
+      <a href="#sass-down" class="down"><i class="icon icon-thumbs-down" id="sass-down"></i></a>
       <b>Current Votes: <span>234</span></b>
     </div>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/_/scripts/jquery-1.9.1.min.js"><\/script>')</script>
     <script src="/_/scripts/app.js"></script>
   </body>
 </html>

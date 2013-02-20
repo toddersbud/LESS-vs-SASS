@@ -1,5 +1,6 @@
 @import "font-awesome.css";
-@import "sass/_mixins.css.scss";
+@import "sass/_mixins";
+@import "sass/_note";
 /*
  * HTML5 Boilerplate
  *
@@ -20,7 +21,7 @@ img {vertical-align:middle;}
    Author's custom styles
    ========================================================================== */
 body {background:url('/_/images/corrugation.png'); color:$brandPrimary; font-size:1em; line-height:1.4; @include font_stack; margin:0 auto; max-width:60em; text-align:center; }
-h1 {color:#222; font-size:6.5em; font-weight:900; line-height:.9; margin:30px 0; padding:0; text-shadow:0px 6px 2px rgba(0,0,0,.17); position:relative; 
+h1 {color:#222; font-size:6.5em; font-weight:900; line-height:.9; margin:30px 0; padding:0; text-shadow:0px 6px 2px rgba(0,0,0,.17); position:relative;
 background:url("/_/images/grad.png");
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
