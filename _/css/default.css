@@ -1,40 +1,52 @@
-@import url(font-awesome.css);
-/* Original */
-/*
- * HTML5 Boilerplate
- *
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
+@import "font-awesome.css";
+.o {
+  outline: 1px solid red;
+}
+.b {
+  border: 1px solid red;
+}
+.notrans {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+.font_stack {
+  font-family: Raleway, Gotham, 'Helvetica Neueu', Helvetica, Arial, sans-serif;
+}
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-html, button, input, select, textarea {
-  color: #5d6971; }
-
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
 ::selection {
   background: #b3d4fc;
-  text-shadow: none; }
-
+  text-shadow: none;
+}
 img {
-  vertical-align: middle; }
-
+  vertical-align: middle;
+}
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 body {
-  background: url("/_/images/corrugation.png");
-  color: #5d6971;
+  background: url('/_/images/corrugation.png');
   font-size: 1em;
+  color: #5d6971;
+  font-family: Raleway, Gotham, 'Helvetica Neueu', Helvetica, Arial, sans-serif;
   line-height: 1.4;
-  font-family: 'Raleway', 'Helvetica Neueu', Helvetica, Arial, sans-serif;
   margin: 0 auto;
   max-width: 60em;
-  text-align: center; }
-
+  text-align: center;
+}
 h1 {
-  color: #222;
+  background: url("/_/images/grad.png");
+  background-size: 110%;
   font-size: 6.5em;
   font-weight: 900;
   line-height: .9;
@@ -42,15 +54,14 @@ h1 {
   padding: 0;
   text-shadow: 0px 6px 2px rgba(0, 0, 0, 0.17);
   position: relative;
-  background: url("/_/images/grad.png");
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
-
+  -webkit-text-fill-color: transparent;
+}
 h2 {
   font-size: 1.9em;
   font-weight: 900;
-  margin: 0; }
-
+  margin: 0;
+}
 .item {
   background: rgba(155, 155, 155, 0.3);
   border: 1px solid #bbb;
@@ -60,125 +71,169 @@ h2 {
   padding: 2% 1% 8% 1%;
   position: relative;
   text-align: center;
-  width: 85%; }
-  .item .icon:before {
-    display: inline-block;
-    font-size: 11em;
-    line-height: .7;
-    margin: 20px 0; }
-  .item b {
-    background-color: #244270;
-    border: 1px solid #888;
-    border-top: 1px solid #888;
-    bottom: -1px;
-    color: #fff;
-    display: block;
-    font-size: 1.5em;
-    font-weight: 100;
-    left: -1px;
-    position: absolute;
-    padding: 2% 1%;
-    width: 98.1%;
-    z-index: 2; }
-    .item b span {
-      font-size: 1.3em;
-      font-weight: 700; }
-  .item a {
-    color: #244270;
-    display: inline-block;
-    margin: 0 1% 20px 0;
-    position: relative;
-    text-decoration: none;
-    z-index: 9; }
-  .item .icon.icon-thumbs-down {
-    margin-bottom: 22px; }
-  .item.sass b {
-    background-color: #ff44da; }
-  .item.sass a {
-    color: #ff44da; }
-
-@media only screen and (min-width:40em) {
+  width: 85%;
+}
+.item .icon:before {
+  display: inline-block;
+  font-size: 11em;
+  line-height: .7;
+  margin: 20px 0;
+}
+.item b {
+  background-color: #244270;
+  border: 1px solid #888;
+  border-top: 1px solid #888;
+  bottom: -1px;
+  color: #fff;
+  display: block;
+  font-size: 1.5em;
+  font-weight: 100;
+  left: -1px;
+  position: absolute;
+  padding: 2% 1%;
+  width: 98.1%;
+  z-index: 2;
+}
+.item b span {
+  font-size: 1.3em;
+  font-weight: 700;
+}
+.item a {
+  color: #244270;
+  display: inline-block;
+  margin: 0 1% 20px 0;
+  position: relative;
+  text-decoration: none;
+  z-index: 9;
+}
+.item .icon.icon-thumbs-down {
+  margin-bottom: 22px;
+}
+.item.sass b {
+  background-color: #ff44da;
+}
+.item.sass a {
+  color: #ff44da;
+}
+@media only screen and (min-width: 33.5em) {
   h1 {
-    font-size: 10em; }
-
+    background-size: 40%;
+  }
+}
+@media only screen and (min-width: 40em) {
+  h1 {
+    font-size: 10em;
+    background-size: 110%;
+  }
   h2 {
     font-size: 4em;
-    margin-bottom: 20px; }
-
+    margin-bottom: 20px;
+  }
   .item {
-    width: 40%; }
-    .item .icon:before {
-      font-size: 13em; }
-    .item a {
-      margin-bottom: 0; } }
-.item {
-  -moz-border-radius: 12px 12px 6px 6px;
-  -webkit-border-radius: 12px 12px 6px 6px;
-  -khtml-border-radius: 12px 12px 6px 6px;
-  border-radius: 12px 12px 6px 6px;
-  background-color: #cccccc;
-  background-image: -moz-linear-gradient(#f0f0f0, #cccccc);
-  background-image: -o-linear-gradient(#f0f0f0, #cccccc);
-  background-image: -ms-linear-gradient(#f0f0f0, #cccccc);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f0f0f0), color-stop(1, #cccccc));
-  background-image: -webkit-linear-gradient(#f0f0f0, #cccccc);
-  -webkit-box-shadow: inset 0 4px 7px rgba(0, 0, 0, 0.17), inset 0 0 0 1px white, 0 0 0 1px #a6a6a6;
-  -moz-box-shadow: inset 0 4px 7px rgba(0, 0, 0, 0.17), inset 0 0 0 1px white, 0 0 0 1px #a6a6a6;
-  box-shadow: inset 0 4px 7px rgba(0, 0, 0, 0.17), inset 0 0 0 1px white, 0 0 0 1px #a6a6a6; }
+    width: 40%;
+  }
+  .item .icon:before {
+    font-size: 13em;
+  }
   .item a {
-    -moz-transition: 0.15s;
-    -o-transition: 0.15s;
-    -ms-transition: 0.15s;
-    -webkit-transition: 0.15s;
-    transition: 0.15s;
-    -moz-transition-delay: 0.01s;
-    -webkit-transition-delay: 0.01s;
-    -o-transition-delay: 0.01s;
-    transition-delay: 0.01s; }
-    .item a:hover {
-      -moz-transform: rotate(-6degdeg);
-      -o-transform: rotate(-6degdeg);
-      -ms-transform: rotate(-6degdeg);
-      -webkit-transform: rotate(-6degdeg);
-      top: -20px; }
-    .item a.down {
-      -moz-transition: 0.3s;
-      -o-transition: 0.3s;
-      -ms-transition: 0.3s;
-      -webkit-transition: 0.3s;
-      transition: 0.3s; }
-    .item a.down:hover {
-      bottom: -20px;
-      top: auto; }
-    .item a.counted {
-      -moz-transform: scale(3.3);
-      -o-transform: scale(3.3);
-      -ms-transform: scale(3.3);
-      -webkit-transform: scale(3.3); }
-  .item b {
-    -moz-border-radius: 0 0 6px 6px;
-    -webkit-border-radius: 0 0 6px 6px;
-    -khtml-border-radius: 0 0 6px 6px;
-    border-radius: 0 0 6px 6px;
-    background-color: rgba(255, 255, 255, 0);
-    background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
-    background-image: -ms-linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255, 255, 255, 0.3)), color-stop(1, rgba(255, 255, 255, 0)));
-    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)); }
-  .item.less {
-    color: #244270; }
-    .item.less b {
-      background-color: #182b49; }
-    .item.less a {
-      color: #182b49; }
-      .item.less a:hover {
-        color: #305997; }
-  .item.sass {
-    color: #ff44da; }
-    .item.sass b {
-      background-color: #ff11d0; }
-    .item.sass a {
-      color: #ff77e4; }
-      .item.sass a:hover {
-        color: #ff11d0; }
+    margin-bottom: 0;
+  }
+}
+@media only screen and (min-width: 52em) {
+  h1 {
+    background-size: 40%;
+  }
+}
+.item {
+  -webkit-border-radius: 12px 12px 6px 6px;
+  -moz-border-radius: 12px 12px 6px 6px;
+  border-radius: 12px 12px 6px 6px;
+  background: #dedede;
+  background-image: -moz-linear-gradient(top, #f0f0f0, #cccccc);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f0f0f0), to(#cccccc));
+  background-image: -webkit-linear-gradient(top, #f0f0f0, #cccccc);
+  background-image: -o-linear-gradient(top, #f0f0f0, #cccccc);
+  background-image: linear-gradient(top, #f0f0f0, #cccccc);
+  filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#f0f0f0, endColorstr=#cccccc)";
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#f0f0f0, endColorstr=#cccccc)";
+  background-image: -ms-linear-gradient(top, #f0f0f0, #cccccc);
+  -webkit-box-shadow: inset 0 4px 7px rgba(0,0,0,.17), inset 0 0 0 1px #fff, 0 0 0 1px #a6a6a6;;
+  -moz-box-shadow: inset 0 4px 7px rgba(0,0,0,.17), inset 0 0 0 1px #fff, 0 0 0 1px #a6a6a6;;
+  box-shadow: inset 0 4px 7px rgba(0,0,0,.17), inset 0 0 0 1px #fff, 0 0 0 1px #a6a6a6;;
+}
+.item a {
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  -moz-transition-delay: 0.01s;
+  -webkit-transition-delay: 0.01s;
+  -o-transition-delay: 0.01s;
+  transition-delay: 0.01s;
+}
+.item a:hover {
+  -webkit-transform: rotate(-6deg);
+  -moz-transform: rotate(-6deg);
+  transform: rotate(-6deg);
+  top: -20px;
+}
+.item a.down {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.item a.down:hover {
+  bottom: -20px;
+  top: auto;
+}
+.item a.counted {
+  -webkit-transform: scale(3.3);
+  -moz-transform: scale(3.3);
+  transform: scale(3.3);
+}
+.item b {
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+  background: #ffffff;
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0)));
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  background-image: linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=rgba(255, 255, 255, 0.3), endColorstr=rgba(255, 255, 255, 0))";
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=rgba(255, 255, 255, 0.3), endColorstr=rgba(255, 255, 255, 0))";
+  background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+}
+.item.less {
+  color: #244270;
+}
+.item.less b {
+  background-color: #182b49;
+}
+.item.less a {
+  color: #182b49;
+}
+.item.less a:hover {
+  color: #305997;
+}
+.item.sass {
+  color: #ff44da;
+}
+.item.sass b {
+  background-color: #ff11d0;
+}
+.item.sass a {
+  color: #ff77e4;
+}
+.item.sass a:hover {
+  color: #ff11d0;
+}
+.ie7 h1,
+.ie8 h1 {
+  *display: inline;
+  zoom: 1;
+}
+.ie7 .container,
+.ie8 .container {
+  margin: 0;
+}
